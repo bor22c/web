@@ -8,6 +8,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 />
 <link rel="stylesheet" href="css.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes/default/default.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2/dist/sweetalert2.min.js"></script>
 
 <link rel="stylesheet" src="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
 
@@ -15,28 +16,43 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 <title>Web Site</title>
 </head>
 <body>
+<<<<<<< HEAD
 <div id="header">
 <div class="textheader">Музейно-выставочный комплекс<br>стрелкового оружия<br> Им. М.Т.Калашникова </div>
 </div>
+=======
+<header id="header">
+
+<div id="name">Музейно-выставочный комплекс<br>стрелкового оружия<br> Им. М.Т.Калашникова </div>
+
+
+>>>>>>> Boris
 <div id="ham" onclick="toggle_menu()">
 <div class="r"></div>
 <div class="r"></div>
 <div class="r"></div>
 </div>
-
+</header>
+<div id="scroll"></div>
 <div id="menu">
+<<<<<<< HEAD
 <a href="#home">Афиша </a>
+=======
+<a href="#home">Главная </a>
+>>>>>>> Boris
 <a href="#about">О нашем музее </a>
 <a href="#skills">Покупка Билетов</a>
-<a href="#suvenirs">Сувениры</a>
-<a href="#colect">Коллекции</a>
-<a href="#contact">Контакты</a>
+<a href="#contact">Связь с нами</a>
 </div>
 
 
 <div id="home">
-<span id="title" ><b class="b"> Сегодня в нашем музее </b><span>
+<span id="title" ><b class="b"> Музейно-выставочный комплекс имени Михаила Тимофеевича Калашникова </b><span>
 <span></span>
+<img src="https://avatars.mds.yandex.net/i?id=ea4112f94754d9d79f0d985f4d6fed8e-5710085-images-thumbs&n=13" />
+<i class="fab fa-github" aria-hidden="true"></i>
+<li class="fab fa-facebook"></li>
+<li class="fab fa-telegram"></li>
 </div>
 <a id="follow" href="https://www.sololearn.com/Profile/24558542/?ref=app">Follow</a>
 
@@ -60,7 +76,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 <div id="section-dark">
 
 <div id="skills">
-<h1 class="section-title">Покупка Билетов </h1>
+<h1 class="section-title">Контакты </h1>
 
 <div class="skill">
 <div class="skill-name"> .
@@ -85,29 +101,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 <div class="skill-value"></div>
 </div>
 </div>
+
 </div>
-</div>
-<div id="suvenirs">
-<h7><b>Что вы можете найти в нашей сувенироной лавке</b> </h7>
-<p>Книги Михаила Тимофеевича Калашникова </p>
-</div>
-<div id="colect">
-<button> Коллекции Музея</button>
-</div>
+
+
 <form id="contact">
-<h1 class="section-title">Связь с нами</h1>
+<h1 class="section-title">Contact</h1>
 <div id="ninja-contact">
 <img src="" alt="user pic" class="small-img">
-<h2>Музеи Калашникова</h2>
+<h2>NinjaGamer</h2>
 <p style="color:lightgrey;">Eazy</p>
 <div
 id="links" style="font-size:30px;">
-<i class="fab fa-github" aria-hidden="true"></i>
+<i class="fab
+fa-github" aria-hidden="true"></i>
 <li class="fab fa-facebook"></li>
 <li class="fab fa-telegram"></li>
 </div>
-<input
-type="email" placeholder="E-mail" required>
+<input type="email" placeholder="E-mail" required>
 
 
 <input type="text" placeholder="Messages or Suggestion." required>
@@ -123,8 +134,7 @@ type="email" placeholder="E-mail" required>
 <script>
 
 var menu = document.getElementById("menu")
-var
-r=document.getElementsByClassName("r")
+var r=document.getElementsByClassName("r")
 function toggle_menu()
 {
 
@@ -156,6 +166,26 @@ for(var i = 0; i<4;i++)
 {
 skills[i].style.background = "conic-gradient(rgb(255,41,43) "+c[i]+"%, rgb(30,30,30) "+c[i]+"%)"
 document.getElementsByClassName("skill-value")[i].innerHTML=c[i]+'<span style="font-size:15px;">%</span>'
+}
+window.onscroll = function()
+{
+var maxS= document.documentElement.clientHeight-window.innerHeight
+var scroll = window.scrollY
+document.getElementById("scroll").style.width=scroll/maxS*100+"%"
+//console.log(scroll)
+if(scroll >= 1526)
+{
+header.style.boxShadow=" 0px 2px 2px lightgrey"
+
+}
+else
+{
+header.style.boxShadow ="0px 2px 5px red"
+
+}
+if(scroll >= 1526){
+    
+}
 }
 </script>
 </script>
